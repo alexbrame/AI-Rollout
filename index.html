@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KI im Büro — Der Plan</title>
+<style>
+  @font-face{
+    font-family:"Dost Serif";
+    src:url(data:font/otf;base64,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) format("opentype");
+    font-weight:700;
+    font-display:swap;
+  }
+  :root{
+    --black:#0a0a0a;
+    --dark:#1d1d1f;
+    --gray1:#6e6e73;
+    --gray2:#96969b;
+    --gray3:#d2d2d7;
+    --gray4:#f5f5f7;
+    --white:#ffffff;
+    --line:#e5e5e7;
+    --g1:#3a3a3c;
+    --g2:#8e6bd1;
+    --g3:#4a90d9;
+    --accent:#eb736e;
+    --accent-light:#f2a19d;
+    --accent-lighter:#f8cac7;
+    --accent-dark:#d85c56;
+    --accent-darker:#b8443f;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--white);
+    color:var(--black);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;
+    height:100vh;
+  }
+  .stage{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* TOP BAR */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 40px;
+    flex:0 0 auto;
+  }
+  .brand{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--gray1);
+  }
+  .progress-track{
+    flex:1;
+    max-width:360px;
+    margin:0 28px;
+    height:3px;
+    background:var(--gray4);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    background:var(--black);
+    border-radius:3px;
+    transition:width .45s cubic-bezier(.65,0,.35,1);
+  }
+  .step-count{
+    font-size:13px;
+    color:var(--gray1);
+    font-variant-numeric:tabular-nums;
+    min-width:44px;
+    text-align:right;
+  }
+
+  /* MAIN STAGE */
+  .slides{
+    flex:1;
+    position:relative;
+    overflow:hidden;
+  }
+  .slide{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding:10px 60px 30px;
+    opacity:0;
+    transform:translateX(40px);
+    pointer-events:none;
+    transition:opacity .5s cubic-bezier(.65,0,.35,1), transform .5s cubic-bezier(.65,0,.35,1);
+    overflow-y:auto;
+  }
+  .slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:auto;
+  }
+  .slide.prev{transform:translateX(-40px);}
+
+  .slide-inner{
+    max-width:860px;
+    width:100%;
+    margin:0 auto;
+    padding-top:18px;
+  }
+
+  .kicker{
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    color:var(--gray1);
+    text-align:center;
+    margin-bottom:14px;
+  }
+  .step-title{
+    font-family:"Dost Serif", -apple-system, sans-serif;
+    font-weight:700;
+    color:var(--accent);
+    font-size:clamp(34px,5.6vw,62px);
+    text-align:center;
+    letter-spacing:-0.01em;
+    line-height:1.05;
+    margin:0 0 16px;
+  }
+  .step-sub{
+    text-align:center;
+    font-size:17px;
+    color:var(--gray1);
+    max-width:600px;
+    margin:0 auto 34px;
+    line-height:1.5;
+  }
+
+  .content-row{
+    display:flex;
+    gap:28px;
+    align-items:stretch;
+  }
+  .content-col{flex:1;}
+
+  .bullet-card{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:16px 20px;
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:12px;
+  }
+  .bullet-num{
+    flex:0 0 auto;
+    width:26px;height:26px;
+    border-radius:50%;
+    background:var(--black);
+    color:var(--white);
+    font-size:12px;
+    font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .bullet-text{font-size:14.5px;color:var(--dark);padding-top:3px;}
+  .bullet-text b{color:var(--black);}
+
+  /* bar chart */
+  .chart{margin:26px 0 18px;}
+  .bar-row{
+    display:grid;
+    grid-template-columns:150px 1fr 60px;
+    align-items:center;
+    gap:14px;
+    padding:9px 0;
+  }
+  .bar-label{font-size:13px;color:var(--dark);font-weight:500;}
+  .bar-track{
+    height:16px;
+    background:var(--gray4);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;
+    border-radius:8px;
+  }
+  .bar-val{font-size:12.5px;color:var(--gray1);text-align:right;font-variant-numeric:tabular-nums;}
+
+  .fill-mono{background:linear-gradient(90deg,var(--accent-darker),var(--accent-dark));}
+  .fill-g1{background:linear-gradient(90deg,var(--accent-dark),var(--accent));}
+  .fill-g2{background:linear-gradient(90deg,var(--accent),var(--accent-light));}
+  .fill-g3{background:linear-gradient(90deg,var(--accent-light),var(--accent-lighter));}
+
+  /* two pole layout for final step */
+  .poles{
+    display:flex;
+    gap:20px;
+    align-items:stretch;
+    margin:20px 0 8px;
+  }
+  .pole{
+    flex:1;
+    border-radius:20px;
+    padding:26px 24px;
+    border:1px solid var(--line);
+  }
+  .pole.core{
+    background:var(--black);
+    color:var(--white);
+    border:none;
+  }
+  .pole-label{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    opacity:.65;
+  }
+  .avatars{display:flex;gap:8px;margin-bottom:16px;}
+  .avatar{
+    width:40px;height:40px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:700;
+    background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+    color:#fff;
+  }
+  .pole h4{margin:0 0 8px;font-size:17px;font-weight:700;}
+  .pole p{margin:0;font-size:13.5px;line-height:1.55;opacity:.9;}
+  .pole.core p{opacity:.85;}
+  .loop-arrow{
+    display:flex;align-items:center;justify-content:center;
+    flex:0 0 auto;
+    width:44px;
+    font-size:20px;
+    color:var(--gray2);
+  }
+
+  .flow-note{
+    text-align:center;
+    font-size:13px;
+    color:var(--gray1);
+    margin-top:18px;
+    max-width:520px;
+    margin-left:auto;margin-right:auto;
+  }
+  .flow-note b{color:var(--black);}
+
+  /* donut */
+  .donut-wrap{display:flex;justify-content:center;margin:8px 0 10px;}
+  .donut{position:relative;width:150px;height:150px;}
+  .donut svg{transform:rotate(-90deg);}
+  .donut-center{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .donut-num{font-size:26px;font-weight:700;}
+  .donut-sub{font-size:10.5px;color:var(--gray1);}
+
+  /* DETAILS TOGGLE + PANEL */
+  .details-toggle{
+    display:flex;
+    justify-content:center;
+    margin-top:22px;
+  }
+  .details-btn{
+    background:var(--white);
+    border:1px solid var(--gray3);
+    color:var(--dark);
+    font-size:13px;
+    font-weight:600;
+    padding:9px 18px;
+    border-radius:20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:background .2s;
+  }
+  .details-btn:hover{background:var(--gray4);}
+  .details-btn .chev{
+    transition:transform .3s;
+    font-size:10px;
+  }
+  .details-btn.open .chev{transform:rotate(180deg);}
+
+  .details-panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s cubic-bezier(.65,0,.35,1), margin-top .45s;
+    margin-top:0;
+  }
+  .details-panel.open{
+    max-height:1200px;
+    margin-top:20px;
+  }
+  .details-inner{
+    background:var(--gray4);
+    border-radius:16px;
+    padding:22px 26px;
+    font-size:13px;
+    color:var(--dark);
+  }
+  .details-inner h5{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--gray1);
+    margin:0 0 10px;
+    font-weight:700;
+  }
+  .details-inner table{width:100%;border-collapse:collapse;margin-bottom:14px;}
+  .details-inner th{
+    text-align:left;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--gray1);
+    padding:6px 8px;
+    border-bottom:1px solid var(--gray3);
+  }
+  .details-inner td{
+    font-size:12.5px;
+    padding:7px 8px;
+    border-bottom:1px solid #e8e8ea;
+    vertical-align:top;
+  }
+  .details-inner tr:last-child td{border-bottom:none;}
+  .details-inner p{margin:0 0 10px;line-height:1.5;}
+  .details-inner ul{margin:0 0 10px;padding-left:18px;}
+  .details-inner li{margin-bottom:5px;line-height:1.45;}
+  .tag{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    padding:2px 7px;
+    border-radius:10px;
+    background:var(--white);
+    border:1px solid var(--gray3);
+    color:var(--gray1);
+  }
+
+  /* NAV */
+  .navbar{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+    padding:18px 40px 26px;
+  }
+  .nav-btn{
+    width:42px;height:42px;
+    border-radius:50%;
+    border:1px solid var(--gray3);
+    background:var(--white);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    font-size:16px;
+    color:var(--black);
+    transition:background .2s, opacity .2s;
+  }
+  .nav-btn:hover{background:var(--gray4);}
+  .nav-btn[disabled]{opacity:.3;cursor:default;}
+  .dots{display:flex;gap:8px;}
+  .dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--gray3);
+    cursor:pointer;
+    transition:background .25s, transform .25s;
+  }
+  .dot.active{background:var(--black);transform:scale(1.3);}
+
+  @media (max-width:760px){
+    .topbar{padding:16px 20px;}
+    .slide{padding:6px 22px 20px;}
+    .content-row{flex-direction:column;}
+    .poles{flex-direction:column;}
+    .loop-arrow{transform:rotate(90deg);margin:4px auto;}
+    .bar-row{grid-template-columns:100px 1fr 46px;gap:8px;}
+  }
+
+  /* FEEDBACK BUTTON — persistent on every slide */
+  .feedback-btn{
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    z-index:200;
+    background:var(--black);
+    color:var(--white);
+    font-size:12.5px;
+    font-weight:600;
+    padding:11px 18px;
+    border-radius:24px;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+    transition:background .2s, transform .2s;
+  }
+  .feedback-btn:hover{background:var(--accent-dark);transform:translateY(-1px);}
+  .feedback-btn .fbicon{font-size:14px;}
+
+  /* FAQ block */
+  .faq-block{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 20px;
+    margin:22px 0 4px;
+    background:var(--gray4);
+  }
+  .faq-q{
+    font-size:14px;
+    font-weight:700;
+    color:var(--black);
+    margin-bottom:6px;
+    display:flex;
+    gap:8px;
+  }
+  .faq-q .qmark{
+    flex:0 0 auto;
+    width:20px;height:20px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-size:12px;
+    font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .faq-a{font-size:13.5px;color:var(--dark);line-height:1.55;padding-left:28px;}
+  .faq-a b{color:var(--black);}
+
+  /* GAUSSIAN / DISTRIBUTION CHART */
+  .dist-wrap{margin:22px 0 6px;}
+  .dist-caption{
+    text-align:center;
+    font-size:12px;
+    color:var(--gray1);
+    margin-top:6px;
+  }
+  .dist-curve{
+    fill:none;
+    stroke:var(--accent);
+    stroke-width:2;
+    stroke-linecap:round;
+  }
+  .dist-area{
+    fill:var(--accent-lighter);
+    opacity:.35;
+  }
+  .dist-dot{
+    fill:var(--white);
+    stroke:var(--accent);
+    stroke-width:1.4;
+    cursor:pointer;
+    transition:fill .15s;
+  }
+  .dist-dot:hover{fill:var(--accent);}
+  .dist-core{
+    fill:var(--accent);
+    stroke:var(--accent-darker);
+    stroke-width:1.5;
+  }
+  .dist-core:hover{fill:var(--accent-darker);}
+  .dist-letter{
+    font-size:11px;
+    font-weight:700;
+    fill:var(--accent-darker);
+    text-anchor:middle;
+    pointer-events:none;
+    font-family:-apple-system,sans-serif;
+  }
+  .dist-letter-core{fill:#fff;}
+  .dist-axis-label{
+    font-size:11px;
+    fill:var(--gray1);
+    text-anchor:middle;
+    font-family:-apple-system,sans-serif;
+  }
+
+  /* COVER + CLOSING SLIDES */
+  .slide-cover{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:60vh;
+    text-align:center;
+  }
+  .slide-cover .step-title{font-size:clamp(40px,7vw,74px);}
+  .cover-meta{
+    margin-top:28px;
+    font-size:13px;
+    color:var(--gray1);
+    letter-spacing:.04em;
+  }
+  .cover-meta b{color:var(--dark);}
+  .takeaway-card{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:26px 24px;
+    margin-bottom:16px;
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    text-align:left;
+  }
+  .takeaway-num{
+    flex:0 0 auto;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-size:16px;
+    font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .takeaway-text h4{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--black);}
+  .takeaway-text p{margin:0;font-size:13.5px;line-height:1.55;color:var(--dark);}
+
+  /* ENTRANCE ANIMATION for slide content ("sliders" grow, blocks fade up) */
+  .kicker, .step-title, .step-sub, .bullet-card, .bar-row, .pole, .donut-wrap,
+  .big-donut-wrap, .faq-block, .takeaway-card, .dist-wrap, .flow-note,
+  .cover-meta, .details-toggle{
+    opacity:0;
+  }
+  .anim-in{
+    animation:slideFadeUp .6s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  @keyframes slideFadeUp{
+    from{opacity:0; transform:translateY(16px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .bar-fill{
+    transition:width 1s cubic-bezier(.22,1,.36,1);
+  }
+  .donut-ring{
+    fill:none;
+    transition:stroke-dashoffset 1.15s cubic-bezier(.22,1,.36,1);
+  }
+
+  /* BIG ANIMATED DONUT / PIE (slide 2) */
+  .big-donut-wrap{display:flex;flex-direction:column;align-items:center;margin:10px 0 6px;}
+  .big-donut{position:relative;width:200px;height:200px;}
+  .big-donut svg{width:100%;height:100%;}
+  .donut-ring-bg{fill:none;stroke:var(--gray4);stroke-width:22;}
+  .big-donut .donut-ring{fill:none;stroke-width:22;stroke-linecap:round;}
+  .big-donut-center{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .big-donut-num{font-size:36px;font-weight:800;color:var(--black);font-variant-numeric:tabular-nums;}
+  .big-donut-sub{font-size:11px;color:var(--gray1);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;}
+  .donut-legend{display:flex;gap:22px;margin-top:16px;flex-wrap:wrap;justify-content:center;}
+  .donut-legend-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--dark);}
+  .donut-legend-item .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto;}
+  .donut-legend-item b{color:var(--black);}
+</style>
+</head>
+<body>
+<div class="stage">
+  <a class="feedback-btn" href="mailto:lstrologo@dost.org" title="Feedback an Louis senden"><span class="fbicon">&#9993;</span> Feedback</a>
+
+  <div class="topbar">
+    <div class="brand">KI IM BÜRO</div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="step-count" id="stepCount">1 / 6</div>
+  </div>
+
+  <div class="slides" id="slides"></div>
+
+  <div class="navbar">
+    <div class="nav-btn" id="prevBtn">&#8592;</div>
+    <div class="dots" id="dots"></div>
+    <div class="nav-btn" id="nextBtn">&#8594;</div>
+  </div>
+
+</div>
+
+<script>
+const steps = [
+{
+  cover:true,
+  kicker:"",
+  title:"KI im Büro",
+  sub:"Der Plan für die nächsten Wochen — wie wir künstliche Intelligenz bewusst, sicher und mit Mass in den Arbeitsalltag bei Dost Architektur bringen.",
+  body:`
+    <div class="cover-meta">Dost Architektur GmbH &nbsp;·&nbsp; Zusammengestellt von Borbála, Louis & Alejandro &nbsp;·&nbsp; <b>Juli 2026</b></div>
+  `,
+  details:``
+},
+{
+  kicker:"Die Ausgangslage",
+  title:"132 Stunden pro Woche",
+  sub:"So viel Zeit verbringt das ganze Büro ungefähr mit Schreiben und Suchen — jede einzelne Woche. KI berührt das meiste davon schon heute, nur nicht bewusst.",
+  body:`
+    <div class="big-donut-wrap">
+      <div class="big-donut">
+        <svg viewBox="0 0 200 200" width="200" height="200">
+          <circle class="donut-ring-bg" cx="100" cy="100" r="80"/>
+          <circle class="donut-ring" cx="100" cy="100" r="80"
+            stroke="var(--accent)"
+            stroke-dasharray="502.65 502.65"
+            data-circ="502.65" data-target="285.6"
+            transform="rotate(-90 100 100)"/>
+          <circle class="donut-ring" cx="100" cy="100" r="80"
+            stroke="var(--accent-dark)"
+            stroke-dasharray="502.65 502.65"
+            data-circ="502.65" data-target="217.06"
+            transform="rotate(65.45 100 100)"/>
+        </svg>
+        <div class="big-donut-center">
+          <div class="big-donut-num count-up" data-target="132">0</div>
+          <div class="big-donut-sub">Std. / Woche</div>
+        </div>
+      </div>
+      <div class="donut-legend">
+        <div class="donut-legend-item"><span class="sw" style="background:var(--accent)"></span>Texte schreiben — <b>57 Std.</b> (43%)</div>
+        <div class="donut-legend-item"><span class="sw" style="background:var(--accent-dark)"></span>Suchen / Organisieren — <b>75 Std.</b> (57%)</div>
+      </div>
+    </div>
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">1</div><div class="bullet-text"><b>79%</b> nutzen bereits KI-Tools — gelegentlich oder regelmässig</div></div>
+      <div class="bullet-card"><div class="bullet-num">2</div><div class="bullet-text">Aber es ist <b>fragmentiert</b> — jede:r findet allein heraus, wie es geht</div></div>
+    </div>
+  `,
+  details:`
+    <h5>Wie die Schätzung entstanden ist</h5>
+    <p>24 von 34 Mitarbeitenden haben an der 13-tägigen internen Umfrage teilgenommen (71% Rücklauf). Zeitspannen wurden in Stunden-Mittelwerte umgerechnet: unter 1 Std. → 0,5 Std., 1–3 Std. → 2 Std., 3–5 Std. → 4 Std., 5+ Std. → 6 Std. — dann über alle 24 Antworten summiert.</p>
+    <table>
+      <tr><th>Zeit / Woche</th><th>Texte schreiben</th><th>Suchen / Organisieren</th></tr>
+      <tr><td>Unter 1 Stunde</td><td>5 Personen (21%)</td><td>5 Personen (21%)</td></tr>
+      <tr><td>1–3 Stunden</td><td>14 Personen (58%)</td><td>7 Personen (29%)</td></tr>
+      <tr><td>3–5 Stunden</td><td>2 Personen (8%)</td><td>7 Personen (29%)</td></tr>
+      <tr><td>5+ Stunden</td><td>3 Personen (13%)</td><td>5 Personen (21%)</td></tr>
+      <tr><td><b>Geschätzte Gesamtzeit</b></td><td><b>≈ 57 Std. / Woche</b></td><td><b>≈ 75 Std. / Woche</b></td></tr>
+    </table>
+    <p>KI-Nutzung: 14 Personen "gelegentlich", 5 "regelmässig", 3 "selten", 2 "noch nicht".</p>
+  `
+},
+{
+  kicker:"Die Prioritäten",
+  title:"Zuerst E-Mail. Dann Protokolle.",
+  sub:"Sieben Aufgabenbereiche, sortiert nach Volumen, danach wie gut KI heute helfen kann und wie mühsam sie sind.",
+  body:`
+    <div class="chart">
+      <div class="bar-row"><div class="bar-label">E-Mail</div><div class="bar-track"><div class="bar-fill fill-g1" style="width:100%"></div></div><div class="bar-val">20–25 Std.</div></div>
+      <div class="bar-row"><div class="bar-label">Sitzungsprotokolle</div><div class="bar-track"><div class="bar-fill fill-g1" style="width:60%"></div></div><div class="bar-val">10–15 Std.</div></div>
+      <div class="bar-row"><div class="bar-label">Recherche</div><div class="bar-track"><div class="bar-fill fill-g3" style="width:80%"></div></div><div class="bar-val">15–20 Std.</div></div>
+      <div class="bar-row"><div class="bar-label">Texte / Berichte</div><div class="bar-track"><div class="bar-fill fill-g1" style="width:48%"></div></div><div class="bar-val">8–12 Std.</div></div>
+    </div>
+    <div class="flow-note">Ablage und Planprüfung sind am mühsamsten — aber sie brauchen <b>IT-/BIM-Lösungen</b>, keine Chat-KI. Wird separat behandelt, nicht Teil dieser Einführung.</div>
+  `,
+  details:`
+    <h5>Vollständige Rangliste der Bereiche</h5>
+    <table>
+      <tr><th>Rang</th><th>Bereich</th><th>Std./Woche</th><th>KI-Eignung</th><th>Frustration</th></tr>
+      <tr><td>1</td><td>E-Mail-Kommunikation</td><td>20–25</td><td>Jetzt lösbar</td><td>Hoch</td></tr>
+      <tr><td>2</td><td>Protokolle / Sitzungsunterlagen</td><td>10–15</td><td>Jetzt lösbar</td><td>Hoch</td></tr>
+      <tr><td>3</td><td>Recherche / Normen / Produkte</td><td>15–20</td><td>Teilweise</td><td>Mittel</td></tr>
+      <tr><td>4</td><td>Texte / Spezifikationen / Berichte</td><td>8–12</td><td>Jetzt lösbar</td><td>Mittel</td></tr>
+      <tr><td>5</td><td>Terminplanung / Pendenzen</td><td>8–10</td><td>Teilweise</td><td>Mittel</td></tr>
+      <tr><td>6</td><td>Ablage / Dokumentensuche</td><td>8–12</td><td>Strukturelle Lösung nötig</td><td>Hoch</td></tr>
+      <tr><td>7</td><td>Planprüfung / Abstimmung mit Planern</td><td>10–15</td><td>Mit KI heute nicht lösbar</td><td>Sehr hoch</td></tr>
+    </table>
+    <p><b>Legende KI-Eignung:</b> 1 = jetzt lösbar mit Claude/Copilot · 2 = teilweise lösbar, braucht geprüfte Prompts und Kontrolle · 3 = mit heutiger KI nicht lösbar — strukturelles oder Software-Problem.</p>
+  `
+},
+{
+  kicker:"Was wir zuerst einführen",
+  title:"Fünf schnelle Erfolge",
+  sub:"Jeder Punkt startet klein, spart innerhalb der ersten zwei Wochen echte Zeit — und ein Mensch prüft das Ergebnis immer.",
+  body:`
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">1</div><div class="bullet-text"><b>E-Mail-Vorlagen</b> — 30–45 Min. gespart pro Person und Woche</div></div>
+      <div class="bullet-card"><div class="bullet-num">2</div><div class="bullet-text"><b>Sitzungsprotokolle</b> — 45–90 Min. gespart pro Protokoll</div></div>
+    </div>
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">3</div><div class="bullet-text"><b>Recherche-Helfer</b> — 30–60 Min. gespart pro Recherche-Aufgabe</div></div>
+      <div class="bullet-card"><div class="bullet-num">4</div><div class="bullet-text"><b>Spezifikationen & Berichte</b> — 1–2 Std. gespart pro längerem Text</div></div>
+    </div>
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">5</div><div class="bullet-text"><b>Dokumentenzusammenfassungen</b> — 30–60 Min. gespart pro Dokument</div></div>
+    </div>
+  `,
+  details:`
+    <h5>Was jeder Quick Win konkret bedeutet</h5>
+    <table>
+      <tr><th>Quick Win</th><th>Was</th><th>Braucht</th></tr>
+      <tr><td>E-Mail-Vorlagen</td><td>8–10 gespeicherte Prompts für die häufigsten E-Mail-Typen, abgestimmt auf den Büroton</td><td>Bezahlter Tarif für gemeinsame Projekte</td></tr>
+      <tr><td>Sitzungsprotokolle</td><td>Notizen oder Audio rein → strukturiertes Protokoll raus (Traktanden, Entscheide, Zuständige, Termine) — immer vor Versand geprüft</td><td>Entfällt, falls Teilnehmende KI-Mitschrift ablehnen</td></tr>
+      <tr><td>Recherche-Helfer</td><td>Materialvergleiche, Produktoptionen, Ausgangspunkte für Normen — nie das letzte Wort bei einer Norm</td><td>Websuche aktiviert</td></tr>
+      <tr><td>Spezifikationen & Berichte</td><td>Grobe Notizen oder ein früheres Dokument rein → fertiger Entwurf raus, im Büro-Stil</td><td>Keine Personendaten in Prompts (HR-Texte: vorher anonymisieren)</td></tr>
+      <tr><td>Dokumentenzusammenfassungen</td><td>PDF hochladen (Ausschreibung, Vertrag, Bericht) → 10-Satz-Zusammenfassung oder Gegenüberstellung</td><td>Keine vertraulichen Verträge ohne vorherige Datenschutzprüfung</td></tr>
+    </table>
+  `
+},
+{
+  kicker:"Vertrauen aufbauen",
+  title:"Echte Bedenken, klare Regeln",
+  sub:"18 von 24 Personen haben in der Umfrage ein Bedenken geäussert. Das ist kein Grund zu bremsen — genau dafür gibt es die Grundregeln unten.",
+  body:`
+    <div class="donut-wrap">
+      <div class="donut">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <circle cx="75" cy="75" r="62" fill="none" stroke="#f5f5f7" stroke-width="14"/>
+          <circle cx="75" cy="75" r="62" fill="none" stroke="url(#gradDonut)" stroke-width="14"
+            class="donut-ring" stroke-dasharray="389.6" data-circ="389.6" data-target="97.4" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gradDonut" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#b8443f"/>
+              <stop offset="100%" stop-color="#eb736e"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="donut-center"><div class="donut-num">18/24</div><div class="donut-sub">äusserten ein Bedenken</div></div>
+      </div>
+    </div>
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">1</div><div class="bullet-text">KI liefert den Entwurf. <b>Ein Mensch prüft und verantwortet</b> ihn, bevor er rausgeht.</div></div>
+      <div class="bullet-card"><div class="bullet-num">2</div><div class="bullet-text">Keine HR-Daten, Löhne oder medizinische Angaben landen je in einem Prompt.</div></div>
+      <div class="bullet-card"><div class="bullet-num">3</div><div class="bullet-text">Bei Normen und Vorschriften: KI findet den Ausgangspunkt — die Originalquelle gilt weiterhin.</div></div>
+    </div>
+  `,
+  details:`
+    <h5>Die Bedenken, kurz gefasst</h5>
+    <table>
+      <tr><th>Bedenken</th><th>Die Regel</th></tr>
+      <tr><td>Fehler / falsche Antworten</td><td>KI entwirft, ein Mensch prüft und ist verantwortlich. Nichts geht ungeprüft raus.</td></tr>
+      <tr><td>Datenschutz / sensible Daten</td><td>Keine HR-Daten (Löhne, IDs, Medizinisches) in KI-Tools. Protokolle nur mit Einverständnis aller.</td></tr>
+      <tr><td>Verlässlichkeit bei Normen / Recht</td><td>KI hilft, eine Stelle zu finden; das Originaldokument bleibt immer die verbindliche Quelle.</td></tr>
+      <tr><td>Urheberrecht / Datenherkunft</td><td>Geringes Risiko bei Text (basiert auf eigenem Input); KI-Bilder müssen klar als solche gekennzeichnet sein.</td></tr>
+      <tr><td>Verlust der persönlichen Note</td><td>KI für die Fleissarbeit nutzen (Protokolle, Standard-E-Mails), nicht für die kreative Arbeit.</td></tr>
+      <tr><td>"Verlernen wir das Selberdenken?"</td><td>Lernende lernen die Aufgabe zuerst, KI kommt danach als Beschleuniger — nie als Abkürzung am Lernen vorbei.</td></tr>
+      <tr><td>Energieverbrauch</td><td>Ein gezielter Prompt verbraucht weniger als eine Stunde plangeloses Googeln mit 30 offenen Tabs.</td></tr>
+      <tr><td>Missbrauch</td><td>Klare Nutzungsrichtlinien; wenn KI an einem Ergebnis mitgewirkt hat, wird das intern offen kommuniziert.</td></tr>
+    </table>
+  `
+},
+{
+  kicker:"Der Business Case",
+  title:"CHF 200 vs. echte Stunden zurück",
+  sub:"Acht Wochen bezahlter Zugang für eine kleine Gruppe kosten weniger als ein einziger verrechenbarer Tag — selbst eine vorsichtige Schätzung des Nutzens übertrifft das deutlich.",
+  body:`
+    <div class="chart">
+      <div class="bar-row"><div class="bar-label">Kosten, 8 Wochen</div><div class="bar-track"><div class="bar-fill fill-mono" style="width:5%"></div></div><div class="bar-val">CHF 200</div></div>
+      <div class="bar-row"><div class="bar-label">Wert bei 20% Nutzung</div><div class="bar-track"><div class="bar-fill fill-g2" style="width:55%"></div></div><div class="bar-val">CHF 4.8k</div></div>
+      <div class="bar-row"><div class="bar-label">Wert bei voller Nutzung</div><div class="bar-track"><div class="bar-fill fill-g2" style="width:100%"></div></div><div class="bar-val">CHF 24k</div></div>
+    </div>
+    <div class="flow-note">Basierend auf einem vorsichtigen internen Stundensatz von <b>CHF 60/Std.</b> und realistischer, teilweiser Nutzung — nicht der optimistischen Vollzahl.</div>
+  `,
+  details:`
+    <h5>Die Rechnung</h5>
+    <p>5 Lizenzen à CHF 20/Person/Monat = CHF 100/Monat → <b>CHF 200</b> für das 8-wöchige Pilotfenster. Interne Schulungszeit ist in dieser Zahl nicht enthalten.</p>
+    <p>Würde das Büro die geschätzten 50–100 eingesparten Stunden/Woche voll nutzen, wären das über 8 Wochen bei einem vorsichtigen internen Satz von CHF 60/Std. rund CHF 24'000 wert. Realistisch landet in den ersten 8 Wochen nur ein Bruchteil davon — selbst bei 20% Realisierung sind das <b>CHF 4'800</b> gegenüber CHF 200 Kosten.</p>
+    <p>Das sind Richtwerte, um einen kleinen, risikoarmen Testlauf zu rechtfertigen — keine garantierte Rendite.</p>
+    <p><i>Umrechnung: CHF-Beträge basieren auf einem Kurs von rund USD 1 = CHF 0.80 (Stand Anfang Juli 2026) und sind auf runde Werte gerundet.</i></p>
+  `
+},
+{
+  kicker:"Das Modell — ab sofort",
+  title:"Drei Personen. Zwei Geschwindigkeiten.",
+  sub:"Statt einer grossen Einführung starten wir mit einem kleinen Kern und lassen ihn sich beweisen.",
+  body:`
+    <div class="poles">
+      <div class="pole core">
+        <div class="pole-label">Kernteam — bezahlter Zugang</div>
+        <div class="avatars">
+          <div class="avatar">B</div>
+          <div class="avatar">L</div>
+          <div class="avatar">A</div>
+        </div>
+        <h4>Borbála, Louis, Alejandro</h4>
+        <p>Die drei intensivsten, sichersten KI-Nutzer:innen erhalten bezahlten Zugang. Sie nutzen es täglich, erschliessen neue Anwendungsfälle und werden zu Ansprechpersonen für alle anderen.</p>
+      </div>
+      <div class="loop-arrow">&#8646;</div>
+      <div class="pole">
+        <div class="pole-label">Alle anderen — bei Bedarf</div>
+        <h4>Einfach bei uns melden, wenn's nötig ist</h4>
+        <p>Für eine einmalige, konkrete Aufgabe, bei der KI helfen könnte — eine knifflige E-Mail, eine Zusammenfassung, eine Recherchefrage — einfach direkt Borbála, Louis oder Alejandro fragen. Kein neues Tool zu lernen, kein Konto einzurichten.</p>
+      </div>
+    </div>
+    <div class="flow-note">Alle <b>1–2 Wochen</b> tauschen sich die drei intern aus — neue Kniffe, sinnvolle Upgrades, was nicht funktioniert — und tragen es zurück ins Büro.</div>
+
+    <div class="dist-wrap">
+      <svg viewBox="0 0 660 210" width="100%" style="max-width:640px;display:block;margin:0 auto;">
+        <path class="dist-area" d="M 10.0 186.0 C 25.0 179.7, 60.0 154.3, 100.0 148.0 C 140.0 141.7, 200.0 156.0, 250.0 148.0 C 300.0 140.0, 350.0 104.0, 400.0 100.0 C 450.0 96.0, 510.0 109.7, 550.0 124.0 C 590.0 138.3, 625.0 175.7, 640.0 186.0 L 640.0 186 L 10.0 186 Z"/>
+        <path class="dist-curve" d="M 10.0 186.0 C 25.0 179.7, 60.0 154.3, 100.0 148.0 C 140.0 141.7, 200.0 156.0, 250.0 148.0 C 300.0 140.0, 350.0 104.0, 400.0 100.0 C 450.0 96.0, 510.0 109.7, 550.0 124.0 C 590.0 138.3, 625.0 175.7, 640.0 186.0 "/>
+        <circle class="dist-dot" cx="88" cy="186" r="11"><title>Michelle Oesterreicher — Noch keine Nutzung</title></circle><text class="dist-letter" x="88" y="190">M</text><circle class="dist-dot" cx="112" cy="186" r="11"><title>Jana Leonie Besmer — Noch keine Nutzung</title></circle><text class="dist-letter" x="112" y="190">J</text><circle class="dist-dot" cx="227" cy="186" r="11"><title>Denise Meier — Infos zu Baumaterialien</title></circle><text class="dist-letter" x="227" y="190">D</text><circle class="dist-dot" cx="250" cy="186" r="11"><title>Sophia Hammes — Gezielte Recherche, E-Mail-Entwürfe</title></circle><text class="dist-letter" x="250" y="190">S</text><circle class="dist-dot" cx="273" cy="186" r="11"><title>Vera Strauss — Protokoll-Infos, gelegentliche Brief-/E-Mail-Formulierung</title></circle><text class="dist-letter" x="273" y="190">V</text><circle class="dist-dot" cx="354" cy="186" r="11"><title>Rafael Weber — Recherche von Baustandards</title></circle><text class="dist-letter" x="354" y="190">R</text><circle class="dist-dot dist-core" cx="377" cy="186" r="11"><title>Borbála Kányádi — Interne Koordination, E-Mails, Standards, CAD-Hilfe</title></circle><text class="dist-letter dist-letter-core" x="377" y="190">B</text><circle class="dist-dot" cx="400" cy="186" r="11"><title>Matthias Corrodi — E-Mails und Texte entwerfen, allgemeine Anfragen</title></circle><text class="dist-letter" x="400" y="190">M</text><circle class="dist-dot dist-core" cx="423" cy="186" r="11"><title>Luis Brunet — Tägliche Poweruser-Nutzung, testet neue Anwendungsfälle</title></circle><text class="dist-letter dist-letter-core" x="423" y="190">L</text><circle class="dist-dot" cx="446" cy="186" r="11"><title>Tim Bachmann — Recherche, Produktsuche, einfache CAD-Fragen</title></circle><text class="dist-letter" x="446" y="190">T</text><circle class="dist-dot" cx="354" cy="162" r="11"><title>Lara Sigrist — Allgemeine Fragen (teils falsch beantwortet)</title></circle><text class="dist-letter" x="354" y="166">L</text><circle class="dist-dot" cx="377" cy="162" r="11"><title>Ausbildung (allgemein) — Formulierung von E-Mails verfeinern</title></circle><text class="dist-letter" x="377" y="166">A</text><circle class="dist-dot" cx="400" cy="162" r="11"><title>Patrick Hiltebrand — Text verfeinern, selten Fachfragen</title></circle><text class="dist-letter" x="400" y="166">P</text><circle class="dist-dot" cx="423" cy="162" r="11"><title>Rahel Suter — Protokolle, E-Mails, Produktrecherche, ArchiCAD-Tipps</title></circle><text class="dist-letter" x="423" y="166">R</text><circle class="dist-dot" cx="446" cy="162" r="11"><title>Marc Zander — Google-KI-Suche, Gemini/ChatGPT, Lightroom-Retusche</title></circle><text class="dist-letter" x="446" y="166">M</text><circle class="dist-dot" cx="366" cy="138" r="11"><title>Jan Neininger — E-Mails korrigieren, Texte umschreiben</title></circle><text class="dist-letter" x="366" y="142">J</text><circle class="dist-dot" cx="388" cy="138" r="11"><title>Daniela Caprez — Schwierige Texte formulieren, Übersetzungen</title></circle><text class="dist-letter" x="388" y="142">D</text><circle class="dist-dot" cx="412" cy="138" r="11"><title>Galina Litman — Texte schreiben/übersetzen, Vergleiche, Protokolle</title></circle><text class="dist-letter" x="412" y="142">G</text><circle class="dist-dot" cx="434" cy="138" r="11"><title>Andreas Weltis — Copilot, ChatGPT für Grafiken/Pläne</title></circle><text class="dist-letter" x="434" y="142">A</text><circle class="dist-dot" cx="504" cy="186" r="11"><title>Sarah Stähle — E-Mails prüfen/entwerfen, Texte überarbeiten, Recherche</title></circle><text class="dist-letter" x="504" y="190">S</text><circle class="dist-dot" cx="527" cy="186" r="11"><title>Andi Löw — Texte schreiben, Excel-Formeln, Recherche</title></circle><text class="dist-letter" x="527" y="190">A</text><circle class="dist-dot" cx="550" cy="186" r="11"><title>Sergei Mikhailenko — E-Mails, Recherche, Dokumente vergleichen</title></circle><text class="dist-letter" x="550" y="190">S</text><circle class="dist-dot" cx="573" cy="186" r="11"><title>Dolores Franciskovic — E-Mails, Fakten prüfen, Ideen ausbauen, Produktsuche</title></circle><text class="dist-letter" x="573" y="190">D</text><circle class="dist-dot" cx="596" cy="186" r="11"><title>Bénédict Bollinger — Dokumente zusammenfassen, E-Mails, Protokolle</title></circle><text class="dist-letter" x="596" y="190">B</text><circle class="dist-dot dist-core" cx="550" cy="162" r="11"><title>Alejandro — Tägliche Poweruser-Nutzung, testet neue Anwendungsfälle</title></circle><text class="dist-letter dist-letter-core" x="550" y="166">A</text>
+        <line x1="20" y1="186" x2="640" y2="186" stroke="var(--gray3)" stroke-width="1"/>
+        <text class="dist-axis-label" x="100" y="204">Noch nicht</text>
+        <text class="dist-axis-label" x="250" y="204">Selten</text>
+        <text class="dist-axis-label" x="400" y="204">Gelegentlich</text>
+        <text class="dist-axis-label" x="550" y="204">Regelmässig</text>
+      </svg>
+      <div class="dist-caption">Jeder Punkt = eine Person im Büro (25 Mitarbeitende). Die drei dunkleren Punkte rechts sind das Kernteam. Maus über einen Punkt halten, um zu sehen, wofür sie KI hauptsächlich nutzt.</div>
+    </div>
+
+    <div class="faq-block">
+      <div class="faq-q"><span class="qmark">?</span> Soll jede Person bei Dost Copilot erhalten?</div>
+      <div class="faq-a">Nein — jedenfalls nicht am Anfang. Zugang bekommt vorerst nur das Kernteam. Alle anderen erhalten erst dann eine eigene Lizenz, <b>wenn die Nutzung über die drei Kernpersonen so gross wird, dass deren Token-Kontingent ausgeschöpft ist</b> — dann wird gezielt erweitert, nicht pauschal für alle freigeschaltet.</div>
+    </div>
+  `,
+  details:`
+    <h5>Warum drei Personen statt des ursprünglichen 5er-Pilots</h5>
+    <p>Die Phase-2-Analyse schlug einen 5-Personen-Pilot vor, der GL, zwei PL-Rollen, Innenarchitektur und Architektur abdeckt — ausgewählt als intensive Nutzer:innen und natürliche Multiplikator:innen für ihre Abteilungen.</p>
+    <p>Dies ist eine bewusst schlankere Version derselben Idee: Statt formeller Schulungsmodule und einer geplanten 8-wöchigen Einführung fürs ganze Büro erhalten drei sichere, bereits aktive KI-Nutzer:innen bezahlten Zugang und fungieren als feste Anlaufstelle. Der wöchentliche/zweiwöchentliche interne Austausch ersetzt den ursprünglichen "Konsolidierungs- & Messungs"-Checkpoint — gleicher Zweck, leichterer Prozess.</p>
+    <ul>
+      <li><b>Tiefere Kosten, geringeres Commitment</b> — 3 statt 5+ Lizenzen, keine geplanten Schulungsmodule im Voraus.</li>
+      <li><b>Schnellerer Start</b> — Nutzungsrichtlinie oder Schulungstermine müssen vor dem Start nicht final stehen.</li>
+      <li><b>Eingebaute Feedback-Schlaufe</b> — im wiederkehrenden Austausch werden neue Upgrades und Anwendungsfälle geprüft, bevor sie breiter geteilt werden.</li>
+      <li><b>Alle bekommen trotzdem Hilfe</b> — niemand ohne bezahlten Zugang bleibt ohne Weg, KI für eine konkrete Aufgabe zu nutzen.</li>
+    </ul>
+    <p>Lernende sind bewusst noch nicht eingeschlossen, gemäss der ursprünglichen Empfehlung, dass KI-Einsatz bei Ausbildungsinhalten zuerst pädagogische Leitplanken braucht.</p>
+    <h5 style="margin-top:16px;">Verteilung der KI-Nutzung im Büro (Detail)</h5>
+    <table>
+      <tr><th>Stufe</th><th>Anzahl Personen</th><th>Anteil</th></tr>
+      <tr><td>Noch nicht</td><td>2</td><td>8%</td></tr>
+      <tr><td>Selten</td><td>3</td><td>12%</td></tr>
+      <tr><td>Gelegentlich</td><td>12</td><td>50%</td></tr>
+      <tr><td>Regelmässig</td><td>5</td><td>21%</td></tr>
+      <tr><td>Kernteam (Poweruser, bezahlter Zugang)</td><td>3</td><td>—</td></tr>
+    </table>
+    <p>Basis: 22 Umfrage-Antworten ohne die drei Kernteam-Mitglieder (Borbála zählt in der Umfrage separat als "gelegentliche" Nutzerin, erhält aber aufgrund ihrer Rolle im Kernteam bezahlten Zugang).</p>
+  `
+},
+{
+  kicker:"Nächste Schritte",
+  title:"Die SPACE Engine kommt dazu",
+  sub:"Parallel zum KI-Pilot bauen wir mit SPACE Media eine Automatisierungsschicht auf unserem bestehenden Microsoft-365-System — das verändert, wie das ganze Büro künftig mit KI arbeitet.",
+  body:`
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">1</div><div class="bullet-text">Liest eingehende <b>E-Mails</b>, klassifiziert sie und legt Anhänge strukturiert in SharePoint ab</div></div>
+      <div class="bullet-card"><div class="bullet-num">2</div><div class="bullet-text">Entwirft <b>Antworten</b> und baut eine durchsuchbare Wissensdatenbank fürs ganze Büro auf</div></div>
+    </div>
+    <div class="content-row">
+      <div class="bullet-card"><div class="bullet-num">3</div><div class="bullet-text">Ersetzt <b>weder Outlook noch SharePoint</b> — läuft als Schicht darüber</div></div>
+      <div class="bullet-card"><div class="bullet-num">4</div><div class="bullet-text">Verschickt <b>nie</b> etwas ohne Klick auf "Freigeben" durch einen Menschen</div></div>
+    </div>
+    <div class="flow-note">Sobald die Wissensdatenbank steht, profitiert auch der Copilot-Kern davon: <b>weniger Sucharbeit</b>, mehr direkt auffindbarer Kontext für Borbála, Louis und Alejandro — und darüber für alle, die sie fragen.</div>
+  `,
+  details:`
+    <h5>Zeitplan</h5>
+    <table>
+      <tr><th>Phase</th><th>Was passiert</th></tr>
+      <tr><td>Vor der Unterzeichnung</td><td>Kickoff-Workshop & Datensichtung — noch keine E-Mail-Inhalte werden verarbeitet, bis die AVV von beiden Seiten unterzeichnet ist</td></tr>
+      <tr><td>Aufbauphase</td><td>Zugriff auf nur zwei namentlich benannte Personen bei SPACE Media beschränkt, jeder Zugriff wird protokolliert</td></tr>
+      <tr><td>Go-Live</td><td>Ein Lesezugriff-Konto liest Outlook-Mails über Microsoft Graph, klassifiziert sie, legt Anhänge ab und entwirft Antworten — Versand braucht immer einen menschlichen Klick</td></tr>
+      <tr><td>Laufender Betrieb</td><td>Tägliche Backups (30 Tage Aufbewahrung), monatlicher Sync, protokollierte Änderungen</td></tr>
+      <tr><td>Im Störungsfall</td><td>Meldung an Dost spätestens 48 Std. nach Entdeckung; SPACE Media unterstützt bei einer allfälligen Meldung an den EDÖB</td></tr>
+      <tr><td>Vertragsende</td><td>Export von Wissensdatenbank & Konfiguration in offenen Formaten, danach Löschung innert 90 Tagen — Rechnungsdaten 10 Jahre gesetzeskonform aufbewahrt</td></tr>
+    </table>
+    <h5 style="margin-top:16px;">Was das für den KI-Piloten bedeutet</h5>
+    <p>Die SPACE Engine und der Copilot-Kern sind zwei unabhängige, aber sich ergänzende Bausteine derselben Strategie: Die SPACE Engine automatisiert die E-Mail- und Ablage-Ebene fürs ganze Büro, während Borbála, Louis und Alejandro als Kernteam die aktive, gesprächsbasierte KI-Nutzung (Texte, Recherche, Protokolle) vorantreiben. Beide Vorhaben laufen unter denselben Grundregeln aus dem Abschnitt "Vertrauen aufbauen": ein Mensch prüft, keine sensiblen Daten ungeschützt, Originalquelle bleibt massgebend.</p>
+    <p>Quelle: Datenschutz- & Sicherheits-Briefing Dost Architektur GmbH × SPACE Media KlG, Stand 30.06.2026 (AVV, SLA, Security-Q&A, Subprozessoren-Liste, Version 1.0).</p>
+  `
+},
+{
+  cover:true,
+  kicker:"Zum Schluss",
+  title:"Drei Dinge zum Mitnehmen",
+  sub:"Der ganze Plan in Kurzform.",
+  body:`
+    <div class="takeaway-card">
+      <div class="takeaway-num">1</div>
+      <div class="takeaway-text">
+        <h4>KI ist längst da — wir machen sie jetzt bewusst und einheitlich</h4>
+        <p>79% nutzen bereits KI-Tools, aber fragmentiert. Fünf Quick Wins (E-Mail, Protokolle, Recherche, Berichte, Zusammenfassungen) bringen alle auf denselben Stand.</p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">2</div>
+      <div class="takeaway-text">
+        <h4>Klein starten: drei Personen, tiefes Risiko, tiefe Kosten</h4>
+        <p>Borbála, Louis und Alejandro erhalten bezahlten Zugang; alle anderen holen sich Hilfe bei Bedarf. Nur CHF 200 für 8 Wochen — Lizenzen für alle erst, wenn das Kernteam an seine Grenzen stösst.</p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">3</div>
+      <div class="takeaway-text">
+        <h4>Der Mensch bleibt verantwortlich</h4>
+        <p>KI liefert Entwürfe, ein Mensch prüft und unterschreibt jedes Ergebnis. Klare Regeln schützen Daten, Normen und die persönliche Note — auch wenn parallel die SPACE Engine dazukommt.</p>
+      </div>
+    </div>
+    <div class="cover-meta">Fragen oder Ideen? &nbsp;<b>Feedback-Button unten rechts</b> oder direkt an Borbála, Louis & Alejandro.</div>
+  `,
+  details:``
+}
+];
+
+let current = 0;
+const slidesEl = document.getElementById('slides');
+const dotsEl = document.getElementById('dots');
+
+steps.forEach((s, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'slide';
+  slide.id = 'slide-' + i;
+  const hasDetails = !!(s.details && s.details.trim());
+  slide.innerHTML = `
+    <div class="slide-inner${s.cover ? ' slide-cover' : ''}">
+      ${s.kicker ? `<div class="kicker">${s.kicker}</div>` : ''}
+      <div class="step-title">${s.title}</div>
+      <div class="step-sub">${s.sub}</div>
+      ${s.body}
+      ${hasDetails ? `
+      <div class="details-toggle">
+        <button class="details-btn" data-idx="${i}">Daten anzeigen <span class="chev">&#9660;</span></button>
+      </div>
+      <div class="details-panel" id="panel-${i}">
+        <div class="details-inner">${s.details}</div>
+      </div>` : ''}
+    </div>
+  `;
+  // prep "sliders" (bar-fills) and donut rings to animate in from zero each time the slide is shown
+  slide.querySelectorAll('.bar-fill').forEach(el => {
+    el.dataset.target = el.style.width || '0%';
+    el.style.width = '0%';
+  });
+  slidesEl.appendChild(slide);
+
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.dataset.idx = i;
+  dotsEl.appendChild(dot);
+});
+
+function render(){
+  document.querySelectorAll('.slide').forEach((el, i) => {
+    el.classList.toggle('active', i === current);
+    el.classList.toggle('prev', i < current);
+  });
+  document.querySelectorAll('.dot').forEach((el, i) => {
+    el.classList.toggle('active', i === current);
+  });
+  document.getElementById('progressFill').style.width = ((current+1)/steps.length*100) + '%';
+  document.getElementById('stepCount').textContent = (current+1) + ' / ' + steps.length;
+  document.getElementById('prevBtn').toggleAttribute('disabled', current === 0);
+  document.getElementById('nextBtn').toggleAttribute('disabled', current === steps.length - 1);
+  animateSlide(current);
+}
+
+function animateSlide(idx){
+  const slide = document.getElementById('slide-' + idx);
+  if(!slide) return;
+
+  // staggered fade-up for content blocks
+  const sel = '.kicker, .step-title, .step-sub, .bullet-card, .bar-row, .pole, .donut-wrap, .big-donut-wrap, .faq-block, .takeaway-card, .dist-wrap, .flow-note, .cover-meta, .details-toggle';
+  slide.querySelectorAll(sel).forEach((el, i) => {
+    el.classList.remove('anim-in');
+    void el.offsetWidth;
+    el.style.animationDelay = Math.min(i * 55, 600) + 'ms';
+    el.classList.add('anim-in');
+  });
+
+  // "sliders" (bar-fill progress bars) grow from zero
+  const bars = slide.querySelectorAll('.bar-fill');
+  bars.forEach(el => { el.style.width = '0%'; });
+  void slide.offsetWidth;
+  bars.forEach((el, i) => {
+    setTimeout(() => { el.style.width = el.dataset.target; }, 180 + Math.min(i * 50, 300));
+  });
+
+  // donut / pie rings draw in
+  const rings = slide.querySelectorAll('.donut-ring');
+  rings.forEach(el => { el.style.strokeDashoffset = el.dataset.circ; });
+  void slide.offsetWidth;
+  rings.forEach((el, i) => {
+    setTimeout(() => { el.style.strokeDashoffset = el.dataset.target; }, 220 + i * 140);
+  });
+
+  // count-up numbers
+  slide.querySelectorAll('.count-up').forEach(el => {
+    const target = parseInt(el.dataset.target, 10);
+    const dur = 900;
+    let start = null;
+    function step(ts){
+      if(!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(p * target);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+document.getElementById('prevBtn').addEventListener('click', () => { if(current>0){current--; render();} });
+document.getElementById('nextBtn').addEventListener('click', () => { if(current<steps.length-1){current++; render();} });
+dotsEl.addEventListener('click', (e) => {
+  const d = e.target.closest('.dot');
+  if(!d) return;
+  current = parseInt(d.dataset.idx);
+  render();
+});
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'ArrowRight'){ if(current<steps.length-1){current++; render();} }
+  if(e.key === 'ArrowLeft'){ if(current>0){current--; render();} }
+});
+
+slidesEl.addEventListener('click', (e) => {
+  const btn = e.target.closest('.details-btn');
+  if(!btn) return;
+  const idx = btn.dataset.idx;
+  const panel = document.getElementById('panel-' + idx);
+  panel.classList.toggle('open');
+  btn.classList.toggle('open');
+  btn.innerHTML = panel.classList.contains('open')
+    ? 'Daten ausblenden <span class="chev">&#9660;</span>'
+    : 'Daten anzeigen <span class="chev">&#9660;</span>';
+});
+
+render();
+</script>
+</body>
+</html>
